@@ -1,0 +1,10 @@
+project: savantenvs/mmseqs2
+target: fuzz_expression
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_expression/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_expression
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_expression/fuzz_expression.dict

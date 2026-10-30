@@ -1,0 +1,9 @@
+project: savantenvs/mmseqs2
+target: fuzz_orf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_orf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_orf
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/mmseqs2
+target: fuzz_kseq
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_kseq/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_kseq
+    libfuzzer: true
+    timeout: 10

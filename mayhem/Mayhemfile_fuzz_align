@@ -1,0 +1,9 @@
+project: savantenvs/mmseqs2
+target: fuzz_align
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_align/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_align
+    libfuzzer: true
+    timeout: 10
